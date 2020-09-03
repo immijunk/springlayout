@@ -12,4 +12,14 @@ public class BackendController {
         return "backend/dashboard";
     }
 
+    @GetMapping(value = "/student")
+    public String student(){
+        return "backend/student";
+    }
+
+    @GetMapping(value = "/addstudent")
+    public String addstudent(){
+        return "backend/NewStudent";
+    }
+
 }
