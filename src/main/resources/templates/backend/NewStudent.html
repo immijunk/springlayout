@@ -11,12 +11,12 @@
                     <h3>Add Student</h3>
                 </div>
                 <div class="col-md-6 text-right">
-                    <a href="student" class="btn btn-lg btn-warning">Back</a>
+                    <a href="student" class="btn btn-warning">Back</a>
                 </div>
             </div>
 
             
-            <form>
+            <form method="post" th:action="@{/savestudent}" th:object="${student}">
                 <div class="form-group row">
                     <label for="firstname" class="col-sm-3 col-form-label">firstname</label>
                     <div class="col-sm-9">
