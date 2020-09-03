@@ -1,5 +1,7 @@
 package th.go.rd.springbootlayout.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -25,7 +27,9 @@ public class BackendController {
     }
 
     @GetMapping(value = "/student")
-    public String student() {
+    public String student(ModelMap model) {
+        List<Student> listStd = stdService.findAll();
+        model.addAttribute("listStd", listStd);
         return "backend/student";
     }
 
