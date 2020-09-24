@@ -1,0 +1,48 @@
+<html lang="en" layout:decorator="backend/layouts/default_layout">
+<head>
+    <title>Edit Student</title>
+</head>
+<body>
+    <div layout:fragment="content">
+
+        <div class="container-fluid">
+            <div class="row card-header my-3">
+                <div class="col-md-6">
+                    <h3>Edit Student</h3>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="student" class="btn btn-warning">Back</a>
+                </div>
+            </div>
+
+            
+            <form method="post" th:action="@{/editsave}" th:object="${student}">
+                <div class="form-group row">
+                    <label for="firstname" class="col-sm-3 col-form-label">firstname</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="firstname" id="firstname" placeholder="" th:field="*{firstname}">
+                    </div>
+                    <label for="lastname" class="col-sm-3 col-form-label">lastname</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="lastname" id="lastname" placeholder="" th:field="*{lastname}">
+                    </div>
+                    <label for="email" class="col-sm-3 col-form-label">email</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="" th:field="*{email}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-3 col-form-label"></label>
+                    <div class="col-sm-9">
+                        <input type="hidden" th:value="${id}" th:field=*{id}>
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
