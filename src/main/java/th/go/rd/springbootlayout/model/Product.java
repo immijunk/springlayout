@@ -32,16 +32,11 @@ public class Product {
     @Column(name="product_status")
     private int product_status;
 
+    @Column(name="product_image")
+    private int product_image;
+
     public Product(){
 
-    }
-
-    public int getId() {
-        return product_id;
-    }
-
-    public void setId(int product_id) {
-        this.product_id = product_id;
     }
 
     public String getProduct_name() {
@@ -74,6 +69,22 @@ public class Product {
 
     public void setProduct_status(int product_status) {
         this.product_status = product_status;
+    }
+
+    public int getProduct_id() {
+        return product_id;
+    }
+
+    public void setProduct_id(int product_id) {
+        this.product_id = product_id;
+    }
+
+    public int getProduct_image() {
+        return product_image;
+    }
+
+    public void setProduct_image(int product_image) {
+        this.product_image = product_image;
     }
 
     
